@@ -44,7 +44,7 @@ const LoginFormik = withFormik({
             username: values.username,
             password: values.password
         }
-        props.props.logInAttempt(dataToPost)
+    props.props.logInAttempt(dataToPost)
     }
 })(LoginForm)
 

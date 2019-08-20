@@ -1,7 +1,10 @@
 import {
     LOG_IN_START, 
     LOG_IN_SUCCESS, 
-    LOG_IN_ERROR, 
+    LOG_IN_ERROR,
+    GET_FRIENDS_START,
+    GET_FRIENDS_SUCCESS,
+    GET_FRIENDS_ERROR
 }   from '../actions'
 
 const initialState = {
@@ -33,6 +36,17 @@ export const reducer = (state = initialState, action) => {
                 error: action.payload,
                 hasToken: false,
                 fireRedirect: false,
+            }
+        case GET_FRIENDS_START:
+            return{
+                ...state, 
+                isLoading: true,
+            }
+        case GET_FRIENDS_SUCCESS:
+            return{
+                ...state,
+                isLoading:false,
+                friendsList: action.payload
             }
         default:
             return state;

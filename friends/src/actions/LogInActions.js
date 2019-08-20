@@ -10,9 +10,8 @@ export const logInAttempt = ( credentials) => {
         axios
             .post('http://localhost:5000/api/login', credentials)
             .then( res => {
-                console.log(res)
-                dispatch({type : LOG_IN_SUCCESS })
                 localStorage.setItem('token', res.data.payload);
+                dispatch({type : LOG_IN_SUCCESS })
             })
             .catch(err => {
                 dispatch({type: LOG_IN_ERROR, payload: err.response})
