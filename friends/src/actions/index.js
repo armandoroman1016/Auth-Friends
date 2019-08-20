@@ -8,5 +8,9 @@ export {
     GET_FRIENDS_START,
     GET_FRIENDS_SUCCESS,
     GET_FRIENDS_ERROR,
-    getFriends
+    getFriends,
+    ADD_FRIEND_START,
+    ADD_FRIEND_SUCCESS,
+    ADD_FRIEND_ERROR,
+    addFriend
 } from './FriendsActions'
