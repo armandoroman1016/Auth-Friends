@@ -1,14 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+import LoginFormik from './components/LoginForm'
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      
-      </header>
+      <LoginFormik/>
     </div>
   );
 }
