@@ -19,6 +19,7 @@ const SingleFriendView = props => {
     )
 }
 
+
 const mapStateToProps = state => {
     return {
         friendsList : state.friendsList
