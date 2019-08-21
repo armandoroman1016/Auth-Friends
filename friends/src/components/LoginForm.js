@@ -27,7 +27,6 @@ const LoginForm = props => {
 }
 
 const LoginFormik = withFormik({
-
     mapPropsToValues({ username, password }){
         return{
             username : username || '',

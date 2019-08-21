@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { getFriends } from '../actions'
 import { connect } from 'react-redux'
 import FormikAddFriend from './AddFriendForm'
+import Friend from './SingleFriend'
 
 
 const FriendsList = props => {
@@ -18,11 +19,7 @@ const FriendsList = props => {
             <FormikAddFriend/>
             {props.friendsList.map( friend => {
                 return(
-                    <div>
-                        <h2>{friend.name}</h2>
-                        <h3>{friend.age}</h3>
-                        <h3>{friend.email}</h3>
-                    </div>
+                    <Friend friend = {friend} key={friend.id}/>
                 )
             })}
         </div>
